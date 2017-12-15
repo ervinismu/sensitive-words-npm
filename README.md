@@ -1,15 +1,15 @@
 # Example 
 
 ```shell
-$ npm install sensitive-words
+$ npm install words-war
 ```
 
 ```javascript
-const sensitiveWords = require('sensitive-words')
+const wordsWar = require('words-war')
 // ES2015 modules
-import sensitiveWords from 'sensitive-words'
+import wordsWar from 'words-war '
 
-const filtered = sensitiveWords(
+const filtered = wordsWar(
   'The new apple macbook pro will have a touchbar',
   ['pro', 'touchbar']
 )
