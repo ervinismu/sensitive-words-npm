@@ -1,4 +1,4 @@
-import wordsWar from '.'
+import { wordsWar } from '.'
 
 test('replace blacklisted words with asterisks', () => (
   expect(wordsWar(
