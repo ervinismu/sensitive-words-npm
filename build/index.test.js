@@ -19,3 +19,10 @@ test('replace blacklisted words in array of string', function () {
     expect(str).toBe(expectedResults[idx]);
   });
 });
+
+test('replace blacklisted words with the associated words', function () {
+  return expect((0, _.wordsWar)('Hello! The new apple macbook pro will have a touchbar', ['pro', 'touchbar', 'Hello!'], {
+    'pro': 'air',
+    'touchbar': 'new feature'
+  })).toBe('**** The new apple macbook air will have a new feature');
+});

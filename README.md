@@ -25,4 +25,14 @@ const filteredWords = wordsWar(
   ],
   ['pro', 'touchbar']
 );
+
+// Custom replacement
+const filtered = wordsWar(
+  'The new apple macbook pro will have a touchbar',
+  ['pro', 'touchbar'],
+  {
+    'pro': 'air',
+    'touchbar': 'new feature'
+  }
+);
 ```
