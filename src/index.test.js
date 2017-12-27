@@ -13,3 +13,22 @@ test('replaces blacklisted words with asterisks', () => (
     ['switch']
   )).toBe('The name of the NX will be the Nintendo ****. The **** will be awesome!')
 ))
+
+test('replace blacklisted words in array of string', () => {
+  const filteredWords = wordsWar(
+    [
+      'The new apple macbook pro will have a touchbar',
+      'The new android will have a touchbar'
+    ],
+    ['pro', 'touchbar']
+  );
+
+  const expectedResults = [
+    'The new apple macbook **** will have a ****',
+    'The new android will have a ****'
+  ];
+
+  filteredWords.forEach((str, idx) => {
+    expect(str).toBe(expectedResults[idx]);
+  });
+});
